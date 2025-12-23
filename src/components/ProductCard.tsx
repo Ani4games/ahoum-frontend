@@ -1,9 +1,5 @@
-interface ProductCardProps {
-  product: Product
-  onAddToCart: () => void
-  onToggleFavorite: () => void
-  onClick: () => void
-}
+import type { ProductCardProps } from "./ProductCardProps"
+
 const ProductCard: React.FC<ProductCardProps> = ({
   product,
   onAddToCart,

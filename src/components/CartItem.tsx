@@ -23,3 +23,4 @@ export interface CartItem {
   price: number;
   quantity: number;
 }
+export default CartItem;
