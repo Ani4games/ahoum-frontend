@@ -1,0 +1,50 @@
+.item {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.image {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 13px;
+  color: #2e7d32;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.button {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.quantity {
+  min-width: 20px;
+  text-align: center;
+  font-size: 14px;
+}

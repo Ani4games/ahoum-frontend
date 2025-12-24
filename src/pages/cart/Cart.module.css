@@ -1,0 +1,22 @@
+.cart {
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
+}
+
+.cart-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .cart-content {
+    grid-template-columns: 1fr;
+  }
+}
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

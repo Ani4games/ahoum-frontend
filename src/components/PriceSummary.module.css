@@ -1,0 +1,40 @@
+.box {
+  background: rgb(30, 224, 13);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.label {
+  color: #555;
+}
+
+.value {
+  font-weight: 500;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.totalLabel {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.totalValue {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2e7d32;
+}

@@ -1,5 +1,5 @@
 import type { ProductCardProps } from "./ProductCardProps"
-
+import styles from "./ProductCard.module.css"
 const ProductCard: React.FC<ProductCardProps> = ({
   product,
   onAddToCart,
@@ -7,17 +7,18 @@ const ProductCard: React.FC<ProductCardProps> = ({
     onClick,
 }) => {
   return (
-    <div className="product-card" onClick={onClick}>
-        <img src={product.image} alt={product.name} className="product-image" />
-        <h2 className="product-name">{product.name}</h2>
-        <p className="product-price">${product.price.toFixed(2)}</p>
-        <button className="add-to-cart-button" onClick={(e) => { e.stopPropagation(); onAddToCart(); }}>
+    <div className={styles.card} onClick={onClick}>
+        <img src={product.image} alt={product.name} className={styles.image} />
+        <h2 className={styles.title}>{product.name}</h2>
+        <p className={styles.price}>${product.price.toFixed(2)}</p>
+        <button className={styles.button} onClick={(e) => { e.stopPropagation(); onAddToCart(); }}>
             Add to Cart
         </button>
-        <button className="favorite-button" onClick={(e) => { e.stopPropagation(); onToggleFavorite(); }}>
+        <button className={`${styles.button} ${styles.secondary}`} onClick={(e) => { e.stopPropagation(); onToggleFavorite(); }}>
             {product.isFavorite ? 'Unfavorite' : 'Favorite'}
         </button>
     </div>
+    
   )
 }
-export default ProductCard
+export default ProductCard;

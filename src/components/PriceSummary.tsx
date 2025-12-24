@@ -1,3 +1,4 @@
+import styles from "./PriceSummary.module.css"
 interface PriceItem {
   name: string
   price: number
@@ -21,7 +22,7 @@ export const PriceSummary: React.FC<PriceSummaryProps> = ({
     subtotal !== undefined ? subtotal : (items?.reduce((s, it) => s + it.price, 0) ?? 0)
 
   return (
-    <div>
+    <div className={styles.box}>
       <h3>Price Summary</h3>
 
       {items && items.length > 0 && (

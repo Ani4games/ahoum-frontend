@@ -1,7 +1,7 @@
 import ProductCard from "../components/ProductCard";
 import PriceSummary from "../components/PriceSummary";
 import type { Product } from "../components/Product";
-
+import styles from "./ComponentLab.module.css";
 export default function ComponentLab() {
   const product: Product = {
     id: "1",
@@ -14,12 +14,12 @@ export default function ComponentLab() {
   };
 
   return (
-    <div style={styles.page}>
-      <h2>Component Lab</h2>
+    <div className={styles.page}>
+      <h2>Dhaka, Bansara</h2>
 
       <section>
         <h3>Products</h3>
-        <div style={styles.grid}>
+        <div className={styles.grid}>
           <ProductCard
             product={product}
             quantity={product.quantity}
@@ -43,16 +43,4 @@ export default function ComponentLab() {
   );
 }
 
-const styles = {
-  page: {
-    maxWidth: 420,
-    margin: "0 auto",
-    padding: 16,
-    fontFamily: "system-ui",
-  },
-  grid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(2, 1fr)",
-    gap: 12,
-  },
-};
+
