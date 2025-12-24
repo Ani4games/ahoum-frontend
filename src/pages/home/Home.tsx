@@ -1,6 +1,8 @@
 // src/pages/home/Home.tsx
 import { products } from "../../data/products"
 import  ProductCard  from "../../components/ProductCard"
+import type { Product } from "../../types/product"
+import sampleProduct from "../../components/Product"
 
 export default function Home() {
   return (
@@ -37,12 +39,24 @@ export default function Home() {
               lg:grid-cols-4
             "
           >
-            {products.map(product => (
+            {products.map((product: Product) => (
               <ProductCard
-                
-                product={product}
+                key={product.id}
+                product={{...product, isFavorite: false, quantity: 0}}
+                quantity={0}
+                onAddToCart={() => {}}
+                onToggleFavorite={() => {}}
+                onClick={() => {}}
               />
             ))}
+            <ProductCard
+                key={sampleProduct.id}
+                product={{...sampleProduct, isFavorite: false, quantity: 0}}
+                quantity={0}
+                onAddToCart={() => {}}
+                onToggleFavorite={() => {}}
+                onClick={() => {}}
+              />
           </div>
 
         </div>

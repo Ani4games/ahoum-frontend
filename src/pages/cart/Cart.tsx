@@ -1,13 +1,13 @@
 // src/pages/cart/Cart.tsx
 import { useState } from "react"
 import { type Product } from "../../types/product"
-import { useCartStore } from "../../stores/cartStore"
-const {
-  items,
-  increaseQty,
-  decreaseQty,
-  removeFromCart,
-} = useCartStore()
+// import { useCartStore } from "../../stores/cartStore"
+// const {
+//   items,
+//   increaseQty,
+//   decreaseQty,
+//   removeFromCart,
+// } = useCartStore()
 
 const mockCart: (Product & { quantity: number })[] = [
   {
